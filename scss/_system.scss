@@ -1,0 +1,65 @@
+// colors
+$grey-900: #141414;
+$grey-800: #1f1f1f;
+$grey-700: #333333;
+$green: #c4f82a;
+$white: #ffffff;
+
+// typography
+// fonts
+@font-face {
+  font-family: "Inter Regular";
+  font-style: normal;
+  src: url("../assets/fonts/static/Inter-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter Semibold";
+  font-style: normal;
+  src: url("../assets/fonts/static/Inter-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter Bold";
+  font-style: normal;
+  src: url("../assets/fonts/static/Inter-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-display: swap;
+}
+
+// text presets
+@mixin text-preset-1() {
+  font-family: "Inter Semibold";
+  font-size: 24px;
+  line-height: 150%;
+  letter-spacing: 0px;
+  color: $white;
+}
+
+@mixin text-preset-2() {
+  font-family: "Inter Regular";
+  font-size: 14px;
+  line-height: 150%;
+  letter-spacing: 0px;
+  color: $white;
+}
+
+@mixin text-preset-2-bold() {
+  font-family: "Inter Bold";
+  font-size: 14px;
+  line-height: 150%;
+  letter-spacing: 0px;
+  color: $white;
+}
+
+// spacings
+$spacing-500: 40px;
+$spacing-300: 24px;
+$spacing-200: 16px;
+$spacing-150: 12px;
+$spacing-100: 8px;
+$spacing-50: 4px;

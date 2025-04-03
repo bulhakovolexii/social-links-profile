@@ -1,0 +1,142 @@
+@use "system" as *;
+
+* {
+  box-sizing: border-box;
+}
+
+.bg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: $grey-900;
+  z-index: -1;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.container {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 $spacing-300;
+}
+
+.card {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: $grey-800;
+  border-radius: $spacing-150;
+  padding: $spacing-500;
+  gap: $spacing-300;
+  width: 100%;
+  max-width: 384px;
+}
+
+.card__avatar {
+  display: block;
+  width: 88px;
+  height: 88px;
+  border-radius: 50%;
+}
+
+.card__name {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: $spacing-50;
+  color: $white;
+}
+
+.name__title {
+  @include text-preset-1();
+  margin: 0;
+}
+
+.name__location {
+  display: block;
+  @include text-preset-2-bold();
+  color: $green;
+}
+
+.card__about {
+  display: block;
+  @include text-preset-2();
+}
+
+.card__links {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-200;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.links__item {
+  a {
+    display: block;
+    padding: $spacing-150;
+    background-color: $grey-700;
+    border-radius: $spacing-100;
+    text-align: center;
+    text-decoration: none;
+    @include text-preset-2-bold();
+    color: $white;
+    transition: background-color 0.2s ease-in, color 0.2s ease-in;
+
+    &:hover {
+      transition: background-color 0.2s ease-in, color 0.2s ease-in;
+      background-color: $green;
+      color: $grey-700;
+    }
+
+    &:focus-visible {
+      outline: 2px solid $green;
+      outline-offset: 2px;
+      border-radius: 4px;
+    }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .card {
+    padding: $spacing-300;
+  }
+}
+
+// started files default styles
+.attribution {
+  @include text-preset-2();
+  font-size: 11px;
+  text-align: center;
+
+  /* to ignore footer height in flex container and centering card relative to viewport */
+  position: absolute;
+  width: 100%;
+  bottom: $spacing-150;
+}
+
+.attribution a {
+  color: $green;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  &:focus-visible {
+    outline: 2px solid $green;
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+}
