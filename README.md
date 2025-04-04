@@ -14,9 +14,6 @@ This is a solution to the [Social links profile challenge on Frontend Mentor](ht
   - [Continued development](#continued-development)
   - [Useful resources](#useful-resources)
 - [Author](#author)
-- [Acknowledgments](#acknowledgments)
-
-**Note: Delete this note and update the table of contents based on what sections you keep.**
 
 ## Overview
 
@@ -32,73 +29,54 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](http://github.com/bulhakovolexii/social-links-profile/)
-- Live Site URL: [Add live site URL here](http://bulhakovolexii.github.io/social-links-profile/)
+- Solution URL: [GihHub repo](http://github.com/bulhakovolexii/social-links-profile/)
+- Live Site URL: [GitHub pages](http://bulhakovolexii.github.io/social-links-profile/)
 
 ## My process
 
 ### Built with
 
 - Semantic HTML5 markup
-- CSS custom properties
+- [Normalize.css](https://necolas.github.io/normalize.css/)
+- [Sass](http://sass-lang.com/)
 - Flexbox
-- CSS Grid
-- Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
-
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+While working on this task, I didn’t encounter any significant difficulties. I decided to use the Sass preprocessor, just like in my previous project, to simplify styling with variables and mixins. However, this time, I moved all the additional code into a separate file, \_system.scss.
 
-To see how you can add code snippets, see below:
+The only part where I had to refer to the documentation and seek help from Google was transitions. Now I’ll try to remember that the following code won’t work:
 
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
-
-```css
-.proud-of-this-css {
-  color: papayawhip;
+```scss
+.links__item {
+  a {
+    transition: background-color color 0.2s ease-in; // For some reason, I thought I could list all the properties to apply the animation to.
+  }
 }
 ```
 
-```js
-const proudOfThisFunc = () => {
-  console.log("🎉");
-};
+The correct approach is:
+
+```scss
+.links__item {
+  a {
+    transition: background-color 0.2s ease-in, color 0.2s ease-in;
+  }
+}
 ```
 
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
-
-**Note: Delete this note and the content within this section and replace with your own learnings.**
+I haven’t worked much with animations before, so they haven’t stuck in my memory very well. Hopefully, I’ll have more opportunities to practice in future projects.
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
-
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
+As recommended in the assignment, after submitting the project, I plan to personalize this page by replacing the photo and other details with my own.
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
+- [Sass installation](https://sass-lang.com/install/) - Here you can find instructions on installing the preprocessor and setting up a project for development.
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
-
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
-
-## Acknowledgments
-
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
+- GitHub - [@bulhakovolexii](https://github.com/bulhakovolexii)
+- Frontend Mentor - [@bulhakovolexii](https://www.frontendmentor.io/profile/bulhakovolexii)
+- LinkedIn - [@bulhakovolexii](https://www.linkedin.com/in/bulhakovolexii/)
